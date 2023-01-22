@@ -1,0 +1,160 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+  word_document: default
+linestretch: 1.5
+gemoetry: left=2cm,right=3cm,top=2.5cm,bottom=2.5cm
+fontsize: 12pt
+subtitle: The Political Power of Economic Ideas - A paradigm shift toward more government
+  intervention?
+
+---
+---
+  
+ 
+
+```{r, echo=FALSE}
+#install.packages("kableExtra")
+
+#state <- c("countercyclical", "keynes*", "fiscal multiplier", "spending multiplier",
+           #"government multiplier", "fiscal deficits", "MPC", "Marginal Propensity To Consume",
+           #"phillips curve")
+
+#no_state <- c("fiscal balance", "consolidation", "fiscal discipline", "fiscal prudence",
+            # "crowding out","austerity", "fiscal orthodoxy", "rational expectations",
+            # "ricardian equivalence")
+#possible_words <- c("perfect competiton", "HANK", "heterogeneous agent*", "frictions",
+                   # "uncertainty")
+
+#df_table <- data.frame(state, no_state)
+x <- c("multiplier", "schuldenfinanziertes",  
+           "schuldenfinanzierte", "schuldenfinanziert",
+           "keynes", "keynsianer", "keynesianismus", "keynesianer", "keynesianisch",
+           "keynesianische","austeritätsprogramme", "austerität", "austeritätspolitik", 
+           "reguliert",
+           "regulierung", "regulierungen", "regulierten", "reguliertes", "subventionen",
+           "subventioniert", "subvention", "subventionierung", "subventionsabbau",
+           "subventionskürzungen", "schulden", "neuverschuldung", "nettoneuverschuldung",
+           "kreditaufnahme", "nettokreditaufnahme", "defizite", "defizit", "expansiv",
+           "expansive", "expansiven", "expansiver", "nettokreditaufnahme", "kreditfinanziert",
+           "kreditfinanzierte", "kreditfinanzierung", "staatsverschuldung", "verschuldung", 
+           "kredite", "ausgeglichen_haushalt", "ausgeglichene_haushalt","ausgeglichenen_haushalt",
+           "ausgeglichener_haushalt", "kürzen", "gekürzt", "schuldenstand", "sparen",
+           "schwarze_null", "konsolidieren", "konsoldierung", "Schuldenbremse")
+
+y <- c("budget_deficit", "budget_deficits","bailout",
+                "bailouts", "crowding_in",
+                "consumption_multiplier",
+                "consumption_multipliers", "countercyclical",
+                "fiscal_deficit", "fiscal_deficits", 
+                "fiscal_multiplier",
+                "fiscal_multipliers", "fiscal_stimulus", 
+                "fiscal_stimuli",
+                "government_debt", "government_spending", 
+                "government_consumption",
+                "government_intervention", 
+                "government_interventions",
+                "public_spending", 
+                "new_keynesian", "neo-keynesian",
+                "neo-keynesians", "keynes", "keynesian", 
+                "keynesians", "keynesianism",
+                "spending_multiplier", "spending_multipliers",
+                "keynesian_multiplier",
+                "keynesian_multipliers", "state_spending",
+                "state_spendings", "stimulus",
+                "stimuli", "state_intervention",
+                "state_interventions", "public_debt", 
+                "policy_intervention", "policy_interventions",
+                "deficit_spending",
+                "regulation",
+                "regulatory_policy", "regulatory_policies",
+                "nationalization",
+                "nationalizations", "nationalisation", "HANK",
+                "fiscal policy",
+                "fiscal policies", "inflation")
+
+z <- c("austere", "austerity","balanced budget", "crowding-out", 
+                                          "crowding_out", "debt_brake",
+                                          "deregulation", "neo-classical", 
+                                          "neo_classical", "neo-classic",
+                                          "neo_classic", "neoclassical", 
+                                          "neoclassic", "monetarist", 
+                                          "monetarists",
+                                          "monetarism", "monetarists", 
+                                          "monetarism", "monetarisms", 
+                                          "monetaristic",
+                                          "free_market", "free_markets", 
+                                          "fiscal_consolidation", 
+                                          "fiscal_consolidations", 
+                                          "fiscal_discipline", 
+                                          "fiscal_prudence", 
+                                          "laissez-faire", "laissez_faire", 
+                                          "spending_cut", "spending_cuts",
+                                          "deficits_reduction", "tax_cuts", 
+                                          "tax_cut", "free_trade", "privatization", 
+                                          "privatisation", 
+                                          "ricardian_equivalence")
+
+                       
+max_ln <- max(c(length(x), length(y), length((z))))
+
+dfm <- data.frame(col1 = c(x,rep(NA, max_ln - length(x))),
+                      col2 = c(y,rep(NA, max_ln - length(y))),
+                      col3 = c(z,rep(NA, max_ln - length(z))))
+#col.names <- ("budget dictionary", "RePEc")
+
+knitr::kable(dfm,
+             format = "markdown",
+             col.names = c("budget dict", "RePEc dict intervent", "RePeC dict neo"))
+#knitr::kable(possible_words,
+            # format = "markdown",
+            # col.names = ("other potential words"),
+             #caption = "Potential words for a dictionary. ")
+ a <- c("good", "nice", "excellent", "positive", "fortunate", "correct", "superior",         "bad", "nasty", "poor", "negative" , "unfortunate", "wrong", "inferior")
+ b <- c("+1","+1","+1","+1","+1","+1","+1","-1","-1","-1","-1","-1","-1","-1" )
+ 
+ c <- c("gut", "perfekt", "ausgezeichnet", "positiv", "erfreulich",
+               "erfreulicherweise", "glücklich", "besser", "effektiv",
+               "schlecht", "übel", "negativ", "falsch", "schlechter", 
+               "fehlerhaft", "schwach", "schädlich", "schlimm")
+ 
+ d <- c("+1","+1","+1","+1","+1","+1","+1","+1","+1","-1","-1","-1","-1","-1",
+        "-1","-1","-1","-1")
+ 
+ max_ln1 <- max(c(length(a), length(b), length(c), length(d)))
+ 
+ dfm1 <- data.frame(col1 = c(a,rep(NA, max_ln1 - length(a))),
+                      col2 = c(b,rep(NA, max_ln1 - length(b))),
+                      col3 = c(c,rep(NA, max_ln1 - length(c))),
+                      col4 = c(d,rep(NA, max_ln1 - length(d))))
+ 
+ knitr::kable(dfm1,
+             format = "markdown",
+             col.names = c("sentiment dict RePEc", "Values RePEc", "Sentiment dict budget", "Values Budget"))
+ 
+ 
+ e <- c("BMF Staffer A", "BMF Staffer B", "Member of budget committee A")
+ f <- c("senior staff budetary department", "former state secratary", "member of budget commitee")
+ 
+ g <- c("March 2021","May 2021","August 2021")
+ 
+
+ 
+ max_ln2 <- max(c(length(e), length(f), length(g)))
+ 
+ dfm2 <- data.frame(col1 = c(e,rep(NA, max_ln2 - length(e))),
+                      col2 = c(f,rep(NA, max_ln2 - length(f))),
+                      col3 = c(g,rep(NA, max_ln2 - length(g))))
+ 
+ knitr::kable(dfm2,
+             format = "markdown",
+             col.names = c("Role Identification", "Role Description", "Date"))
+ 
+
+```
+   
+     
+      
+
+
