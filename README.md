@@ -32,3 +32,6 @@ me insights on how important it is to have evidence-based, inter-researcher vali
 texts and others (there exist a lot of dictionaries for political texts, but even here the language barrier is still
 very large since most of today’s dictionaries focus on English language).
 
+# Note
+This is an old code. It is not a comprehensive reflection of my current coding abilities and is not following good practices of coding. Also, since some of the data is not publicly available the code does not run through on your machine. With this repo I just want to show from where I started to signal potential employers my professional development.
+
