@@ -1,5 +1,4 @@
-# bachelor_thesis
-Bachelor Thesis: The Political Power of Economic Ideas - Summer 2021
+# My bachelor-thesis: The Political Power of Economic Ideas - Summer 2021
 
 This Repo is accociated with my BA Thesis that I wrote in Summer 2021. It is also my first 'bigger' coding experience.
 
