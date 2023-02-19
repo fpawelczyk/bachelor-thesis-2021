@@ -5,8 +5,7 @@ This Repo is accociated with my BA Thesis that I wrote in Summer 2021. It is als
 # Contents
 
 My inspiration for this project arose while reading Mark Blyth’s
-Austerity. His analysis and historical refurbishment on how ideas got a predominant policy paradigm are cru-
-cial. Blyth thinks that ideas in different forms (e.g. elite assumptions that constrain cognitive range) can shape
+Austerity. His analysis and historical refurbishment on how ideas got a predominant policy paradigm are crucial. Blyth thinks that ideas in different forms (e.g. elite assumptions that constrain cognitive range) can shape
 the life of millions of people, due to their influence on policy-maker’s perception, which again affect the policies
 put into practice. After 2008 (great financial crisis) austerity caused a cut in social spendings; this had a direct
 effect on the distribution of income and wealth and is often seen as putting the lower income households at a
